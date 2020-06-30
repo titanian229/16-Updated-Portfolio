@@ -4,22 +4,23 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://kit.fontawesome.com/c502137733.js"></script>
-        <link rel="stylesheet" href="./assets/style.css" />
+        <link rel="stylesheet" href="./assets/dist/style.css" />
         <title>James Lee</title>
     </head>
     <body>
         <div id="welcome-container">
             <div id="welcome">
                 <h1>James T Lee</h1>
-                <p class="welcome">Full stack web developer</p>
-                <p class="welcome">Contact me and let's see what we can create together</p>
+                <p id="headline">Full stack web developer</p>
+                <p id="subtitle">Contact me and let's see what we can create together</p>
             </div>
         </div>
         <div class="main-container">
             <h1 class="section-title">About</h1>
             <div id="skills">
                 <p>
-                    HTML5 | CSS3 | JavaScript ES6 | Python | SQL | Git MongoDB / Express / React / Node.js (MERN) Stack
+                    HTML5 | CSS3 | JavaScript&nbsp;ES6 | Python | SQL | Git |
+                    MongoDB&nbsp;/&nbsp;Express&nbsp;/&nbsp;React&nbsp;/&nbsp;Node.js&nbsp;(MERN)&nbsp;Stack
                 </p>
                 <p>
                     Handlebars.js | Bootstrap | Sass
@@ -27,12 +28,12 @@
             </div>
 
             <div id="about-container">
-                <div>
+                <div class="clearfix">
                     <p>
-                        I am a full stack web developer, based in Toronto. Focused on clean, efficient, and easily
-                        expandable code. I’ve built applications from a database manager to automate conversion of
-                        manufacturer item numbers and management of online orders, to an android interface for bulk
-                        creation of google calendar events using the GCal API.
+                        Hello, I'm James Lee. I'm a full stack web developer, based in Toronto. Focused on clean,
+                        efficient, and easily expandable code. I’ve built applications from a database manager to
+                        automate conversion of manufacturer item numbers and management of online orders, to an android
+                        interface for bulk creation of google calendar events using the GCal API.
                     </p>
 
                     <p>
@@ -58,138 +59,180 @@
 
                 <!-- PROJECT PASTE -->
 
-                <div class="project-card">
+                <div class="project-card neumorphic-shadows">
                     <div class="project-text">
-                        <h2 class="project-title">EcoRoute</h2>
-                        <p class="project-headline">
-                            Find your way from A to B while minimizing your carbon footprint!
-                        </p>
-                        <ul class="project-technologies">
-                            <li class="technology-item">JavaScript</li>
-                            <li class="technology-item">HTML/CSS</li>
-                            <li class="technology-item">HERE Mapping/Routing API</li>
-                            <li class="technology-item">OpenWeatherMap API</li>
-                            <li class="technology-item">Bootstrap</li>
-                        </ul>
-                        <div class="project-links">
-                            <button class="project-live-link" href="https://titanian229.github.io/EcoRoute"></button>
-                            <a href="https://github.com/titanian229/EcoRoute"><i class="fab fa-github"></i></a>
+                        <div class="project-title">
+                            <h2>EcoRoute</h2>
+                        </div>
+                        <div class="project-description">
+                            <p class="project-headline">
+                                Find your way from A to B while minimizing your carbon footprint!
+                            </p>
+                            <ul class="project-technologies">
+                                <li>JavaScript</li>
+                                <li>HTML/CSS</li>
+                                <li>HERE Mapping/Routing API</li>
+                                <li>OpenWeatherMap API</li>
+                                <li>Bootstrap</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/titanian229/EcoRoute"><i class="fab fa-github"></i></a>
+                                <button href="https://titanian229.github.io/EcoRoute">See it online</button>
+                            </div>
                         </div>
                     </div>
-                    <img src="./assets/icons/EcoRouteTall.jpg" alt="" />
+                    <img src="./assets/icons/ecoroutesquare.jpg" alt="" />
                 </div>
-                <div class="project-card">
+
+                <div class="project-card neumorphic-shadows">
                     <div class="project-text">
-                        <h2 class="project-title">ScheduleCreator</h2>
-                        <p class="project-headline">Enter your work schedule on mobile or desktop</p>
-                        <ul class="project-technologies">
-                            <li class="technology-item">Python</li>
-                            <li class="technology-item">Kivy</li>
-                            <li class="technology-item">Google Calendar API</li>
-                            <li class="technology-item">SQLite</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/titanian229/schedule-creator-public"
-                                ><i class="fab fa-github"></i
-                            ></a>
+                        <div class="project-title">
+                            <h2>ScheduleCreator</h2>
+                        </div>
+                        <div class="project-description">
+                            <p class="project-headline">Enter your work schedule on mobile or desktop</p>
+                            <ul class="project-technologies">
+                                <li>Python</li>
+                                <li>Kivy</li>
+                                <li>Google Calendar API</li>
+                                <li>SQLite</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/titanian229/schedule-creator-public"
+                                    ><i class="fab fa-github"></i
+                                ></a>
+                            </div>
                         </div>
                     </div>
-                    <img src=". /assets/icons/scheduler1.jpg" alt="" />
+                    <img src="./assets/icons/scheduler1.jpg" alt="" />
                 </div>
-                <div class="project-card">
+
+                <div class="project-card neumorphic-shadows">
                     <div class="project-text">
-                        <h2 class="project-title">Weather Dashboard</h2>
-                        <p class="project-headline">See weather conditions, to plan your trips or just your day</p>
-                        <ul class="project-technologies">
-                            <li class="technology-item">HTML/CSS</li>
-                            <li class="technology-item">JavaScript</li>
-                            <li class="technology-item">OpenWeatherMap API</li>
-                        </ul>
-                        <div class="project-links">
-                            <button class="project-live-link" href="https://titanian229.github.io/homework06"></button>
-                            <a href="https://github.com/titanian229/homework06"><i class="fab fa-github"></i></a>
+                        <div class="project-title">
+                            <h2>Weather Dashboard</h2>
+                        </div>
+                        <div class="project-description">
+                            <p class="project-headline">See weather conditions, to plan your trips or just your day</p>
+                            <ul class="project-technologies">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                                <li>OpenWeatherMap API</li>
+                            </ul>
+                            <div class="project-links">
+                                <button href="https://titanian229.github.io/homework06"></button>
+                                <a href="https://github.com/titanian229/homework06"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
                     </div>
                     <img src="./assets/icons/weather-dashboard.jpg" alt="" />
                 </div>
-                <div class="project-card">
+
+                <div class="project-card neumorphic-shadows">
                     <div class="project-text">
-                        <h2 class="project-title">Workday Scheduler</h2>
-                        <p class="project-headline">Quickly plan out your day</p>
-                        <ul class="project-technologies">
-                            <li class="technology-item">HTML/CSS</li>
-                            <li class="technology-item">JavaScript</li>
-                            <li class="technology-item">Moment.js</li>
-                        </ul>
-                        <div class="project-links">
-                            <button
-                                class="project-live-link"
-                                href="https://titanian229.github.io/workdayScheduler"
-                            ></button>
-                            <a href="https://github.com/titanian229/workdayScheduler"><i class="fab fa-github"></i></a>
+                        <div class="project-title">
+                            <h2>Workday Scheduler</h2>
+                        </div>
+                        <div class="project-description">
+                            <p class="project-headline">Quickly plan out your day</p>
+                            <ul class="project-technologies">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                                <li>Moment.js</li>
+                            </ul>
+                            <div class="project-links">
+                                <button href="https://titanian229.github.io/workdayScheduler"></button>
+                                <a href="https://github.com/titanian229/workdayScheduler"
+                                    ><i class="fab fa-github"></i
+                                ></a>
+                            </div>
                         </div>
                     </div>
                     <img src="./assets/icons/workday-scheduler.jpg" alt="" />
                 </div>
-                <div class="project-card">
+
+                <div class="project-card neumorphic-shadows">
                     <div class="project-text">
-                        <h2 class="project-title">Coding Quiz</h2>
-                        <p class="project-headline">See how you measure up in your Javascript knowledge</p>
-                        <ul class="project-technologies">
-                            <li class="technology-item">HTML/CSS</li>
-                            <li class="technology-item">JavaScript</li>
-                        </ul>
-                        <div class="project-links">
-                            <button class="project-live-link" href="https://titanian229.github.io/homework04"></button>
-                            <a href="https://github.com/titanian229/homework04"><i class="fab fa-github"></i></a>
+                        <div class="project-title">
+                            <h2>Coding Quiz</h2>
+                        </div>
+                        <div class="project-description">
+                            <p class="project-headline">See how you measure up in your Javascript knowledge</p>
+                            <ul class="project-technologies">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="project-links">
+                                <button href="https://titanian229.github.io/homework04"></button>
+                                <a href="https://github.com/titanian229/homework04"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
                     </div>
                     <img src="./assets/icons/javascript-quiz.jpg" alt="" />
                 </div>
-                <div class="project-card">
+
+                <div class="project-card neumorphic-shadows">
                     <div class="project-text">
-                        <h2 class="project-title">Password Generator</h2>
-                        <p class="project-headline">Easily generate a password to fit your requirements</p>
-                        <ul class="project-technologies">
-                            <li class="technology-item">HTML/CSS</li>
-                            <li class="technology-item">JavaScript</li>
-                        </ul>
-                        <div class="project-links">
-                            <button class="project-live-link" href="https://titanian229.github.io/homework03"></button>
-                            <a href="https://github.com/titanian229/homework03"><i class="fab fa-github"></i></a>
+                        <div class="project-title">
+                            <h2>Password Generator</h2>
+                        </div>
+                        <div class="project-description">
+                            <p class="project-headline">Easily generate a password to fit your requirements</p>
+                            <ul class="project-technologies">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="project-links">
+                                <button href="https://titanian229.github.io/homework03"></button>
+                                <a href="https://github.com/titanian229/homework03"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
                     </div>
                     <img src="./assets/icons/password-generator.jpg" alt="" />
                 </div>
-                <div class="project-card">
+
+                <div class="project-card neumorphic-shadows">
                     <div class="project-text">
-                        <h2 class="project-title">pHue Experiment</h2>
-                        <p class="project-headline">Simply control your smart lightbulb</p>
-                        <ul class="project-technologies">
-                            <li class="technology-item">Python</li>
-                            <li class="technology-item">pHue Library</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/titanian229/phueUIExperiment"><i class="fab fa-github"></i></a>
+                        <div class="project-title">
+                            <h2>pHue Experiment</h2>
+                        </div>
+                        <div class="project-description">
+                            <p class="project-headline">Simply control your smart lightbulb</p>
+                            <ul class="project-technologies">
+                                <li>Python</li>
+                                <li>pHue Library</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/titanian229/phueUIExperiment"
+                                    ><i class="fab fa-github"></i
+                                ></a>
+                            </div>
                         </div>
                     </div>
                     <img src="./assets/icons/phue.jpg" alt="" />
                 </div>
-                <div class="project-card">
+
+                <div class="project-card neumorphic-shadows">
                     <div class="project-text">
-                        <h2 class="project-title">TC-Tools</h2>
-                        <p class="project-headline">
-                            Manage ecomm orders from multiple vendors, easily deal with conflicting vendor's item
-                            databases on the go
-                        </p>
-                        <ul class="project-technologies">
-                            <li class="technology-item">Python</li>
-                            <li class="technology-item">Kivy</li>
-                            <li class="technology-item">SQLite</li>
-                            <li class="technology-item">Google Sheets API</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/titanian229/tc-tools-public"><i class="fab fa-github"></i></a>
+                        <div class="project-title">
+                            <h2>TC-Tools</h2>
+                        </div>
+                        <div class="project-description">
+                            <p class="project-headline">
+                                Manage ecomm orders from multiple vendors, easily deal with conflicting vendor's item
+                                databases on the go
+                            </p>
+                            <ul class="project-technologies">
+                                <li>Python</li>
+                                <li>Kivy</li>
+                                <li>SQLite</li>
+                                <li>Google Sheets API</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/titanian229/tc-tools-public"
+                                    ><i class="fab fa-github"></i
+                                ></a>
+                            </div>
                         </div>
                     </div>
                     <img src="" alt="" />
@@ -204,7 +247,6 @@
                 <p>Find me on <a href="https://www.linkedin.com/in/jamestlee221/">LinkedIn</a></p>
                 <p>See my work on <a href="https://github.com/titanian229">GitHub</a></p>
             </div>
-
         </div>
     </body>
 </html>

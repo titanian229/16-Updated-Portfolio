@@ -19,7 +19,7 @@ const projects = [
             "Application that provides a simple way to create many Google Calendar events based on a week's shift schedule, while logging expected pay and shift information to a SQL database. Easily accessed with through an android application or a command line interface.",
         githubLink: "https://github.com/titanian229/schedule-creator-public",
         liveLink: "",
-        imageURL: ". /assets/icons/scheduler1.jpg",
+        imageURL: "./assets/icons/scheduler1.jpg",
         technologies: ["Python", "Kivy", "Google Calendar API", "SQLite"],
     },
     {
@@ -126,7 +126,7 @@ const renderProject = (project) => {
     template = replacePlaceholders(template, "ProjectHeadline", project.subtitle);
 
     technologies = project.technologies.map(function (techItem) {
-        return `<li class="technology-item">${techItem}</li>`;
+        return `<li>${techItem}</li>`;
     });
 
     template = replacePlaceholders(template, "ProjectTechnologies", technologies.join("\n"));
@@ -137,7 +137,7 @@ const renderProject = (project) => {
         template = replacePlaceholders(template, "ProjectGithub", "");
     }
     if (project.liveLink != ''){
-        liveTemplate = `<button class="project-live-link" href="${project.liveLink}"></button>`
+        liveTemplate = `<button href="${project.liveLink}"></button>`
         template = replacePlaceholders(template, "ProjectLiveLink", liveTemplate);
     } else {
 

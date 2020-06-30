@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+$main-bg: hsl(0, 0, 90);
+$text: hsl(0, 0, 20);
+$highlight-text: hsl(0, 0, 10);
+$title: hsl(0, 0, 0);
+
+$neu-upper: hsl(0, 0, 100);
+$neu-lower: hsl(0, 0, 80);
+$neu-border: hsl(0, 0, 95);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans";
+    background-color: $main-bg;
+    color: $text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Comfortaa";
+}
+
+#welcome-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome {
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 0 8px white;
+    line-height: 1.5;
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+        color: $highlight-text;
+    }
+    #subtitle {
+        font-size: 1.5em;
+        font-style: italic;
+    }
+    #headline {
+        font-size: 2em;
+    }
+}
+
+.main-container {
+    margin: 0 10vw;
+}
+
+.section-title {
+    text-align: center;
+    color: $title;
+    text-decoration: underline;
+    margin-top: 3em;
+}
+
+#skills {
+    font-size: 1em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+// div {
+//     outline: 1px solid red;
+// }
+
+#about-container {
+    margin-top: 4em;
+    line-height: 1.5;
+    display: flex;
+
+    div:first-of-type {
+        width: 70%;
+        margin-right: 2.5em;
+    }
+
+    div:nth-child(2) {
+        width: 30%;
+    }
+
+    p:first-of-type {
+        text-indent: 2em;
+    }
+
+    p + p {
+        margin-top: 2em;
+    }
+
+    img {
+        height: auto;
+        width: 100%;
+        border-radius: 15px;
+        border: 2px solid $text;
+    }
+}
+
+.project-card {
+    width: 90%;
+    // height: 260px;
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: 0.7fr 0.3fr;
+
+    .project-text {
+        // width: 70%;
+        height: 100%;
+        margin: 0 1em;
+        // box-shadow: inset 1px 1px 5px $neu-lower, inset -1px -1px 5px $neu-upper;
+        border-radius: 10px;
+        margin-bottom: 1em;
+        margin-top: 1em;
+
+        .project-title {
+            width: 100%;
+            margin-bottom: 0.8em;
+            border-radius: 10px 10px 0 0;
+            padding-left: 2em;
+            height: 2.5em;
+            // box-shadow: 1px 1px 5px $neu-lower, -1px -1px 5px $neu-upper;
+            // border-bottom: 1px solid $neu-upper;
+            // background-color: $neu-upper;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .project-description {
+            width: 100%;
+            box-shadow: inset 1px 1px 5px $neu-lower, inset -1px -1px 5px $neu-upper;
+            padding: 1em;
+            border-radius: 10px;
+        }
+
+        ul {
+            margin-left: 1em;
+            margin-top: 1em;
+            list-style-type: none;
+            font-size: 0.8em;
+        }
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .project-links {
+        display: flex;
+        justify-content: space-between;
+
+        margin-top: 1em;
+
+        font-size: 2em;
+    }
+}
+
+// UTILITY CLASSES
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.neumorphic-shadows {
+    -webkit-box-shadow: 3px 3px 10px $neu-lower, -3px -3px 10px $neu-upper;
+    box-shadow: 3px 3px 10px $neu-lower, -3px -3px 10px $neu-upper;
+    border: 1px solid $neu-border;
+    border-radius: 10px;
+}
+
+.neumorphic-shadows-hover:hover {
+    cursor: pointer;
+    -webkit-box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+}
+
+@media screen and (max-width: 700px) {
+    .project-card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-container {
+        margin: 0 3vw;
+    }
+}

@@ -26,9 +26,12 @@ h5 {
 }
 
 #welcome {
-  padding: 60px;
+  padding: 40px;
   border-radius: 25px;
   box-shadow: 0 0 8px #333;
+}
+#welcome h1 {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
