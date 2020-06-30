@@ -136,14 +136,13 @@ const renderProject = (project) => {
     } else {
         template = replacePlaceholders(template, "ProjectGithub", "");
     }
-    if (project.liveLink != ''){
-        liveTemplate = `<button href="${project.liveLink}"></button>`
+    if (project.liveLink != "") {
+        liveTemplate = `<a href="${project.liveLink}"><i class="fas fa-anchor"></i></a>`;
         template = replacePlaceholders(template, "ProjectLiveLink", liveTemplate);
     } else {
-
         template = replacePlaceholders(template, "ProjectLiveLink", "");
     }
-    
+
     template = replacePlaceholders(template, "ProjectImg", project.imageURL);
     return template;
 };
@@ -157,4 +156,4 @@ let projectSection = projects.map(function (project) {
     return renderProject(project);
 });
 // console.log(projectSection);
-fs.writeFileSync(path.resolve(__dirname, "project-output.html"), projectSection.join("\n"),  "utf8")
+fs.writeFileSync(path.resolve(__dirname, "project-output.html"), projectSection.join("\n"), "utf8");

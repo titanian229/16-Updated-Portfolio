@@ -111,8 +111,8 @@ var renderProject = function renderProject(project) {
     template = replacePlaceholders(template, "ProjectGithub", "");
   }
 
-  if (project.liveLink != '') {
-    liveTemplate = "<button href=\"".concat(project.liveLink, "\"></button>");
+  if (project.liveLink != "") {
+    liveTemplate = "<a href=\"".concat(project.liveLink, "\"><i class=\"fas fa-anchor\"></i></a>");
     template = replacePlaceholders(template, "ProjectLiveLink", liveTemplate);
   } else {
     template = replacePlaceholders(template, "ProjectLiveLink", "");
