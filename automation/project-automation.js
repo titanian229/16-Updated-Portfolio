@@ -80,7 +80,7 @@ const projects = [
             "An android application built using Python, SQLite and the Google Sheets API, for tracking orders and converting item numbers",
         githubLink: "https://github.com/titanian229/tc-tools-public",
         liveLink: "",
-        imageURL: "",
+        imageURL: "./assets/icons/tc-main.png",
         technologies: ["Python", "Kivy", "SQLite", "Google Sheets API"],
     },
 ];

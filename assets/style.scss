@@ -39,7 +39,7 @@ h5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(../landscape-photo-of-mountain-fullq.jpg) top center / auto 100% no-repeat;
+    background: url(../landscape-photo-of-mountain-fullq.jpg) center/ cover no-repeat;
     border-bottom: 6px solid #04508d;
 }
 
@@ -125,25 +125,25 @@ h5 {
     // height: 260px;
     margin: 2em auto;
     display: grid;
-    grid-template-columns: 0.7fr 0.3fr;
+    grid-template-columns: 0.3fr 0.7fr;
+    position: relative;
+    overflow: hidden;
 
     .project-text {
-        // width: 70%;
+        grid-column-start: 2;
         height: 100%;
-        margin: 1em 1em;
-        // box-shadow: inset 1px 1px 5px $neu-lower, inset -1px -1px 5px $neu-upper;
-        border-radius: 10px;
+        // border-radius: 0 10px 10px 0;
+        background-color: $main-bg;
+        padding: 1em;
+        border-left: 6px solid #04508d;
 
         .project-title {
             width: 100%;
             margin-bottom: 0.8em;
-            border-radius: 10px 10px 0 0;
+            // border-radius: 10px 10px 0 0;
             padding-left: 1em;
             height: 2.5em;
             color: $highlight-text;
-            // box-shadow: 1px 1px 5px $neu-lower, -1px -1px 5px $neu-upper;
-            // border-bottom: 1px solid $neu-upper;
-            // background-color: $neu-upper;
 
             display: flex;
             align-items: center;
@@ -165,13 +165,33 @@ h5 {
             margin-top: 1em;
             list-style-type: none;
             font-size: 0.8em;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        li {
+            padding: 0.4em;
+            // border: 1px solid $highlight-text;
+            box-shadow: 1px 1px 5px $neu-lower, -1px -1px 5px $neu-upper;
+
+            border-radius: 4px;
+            margin: 0.4em;
         }
     }
 
     img {
         height: 100%;
-        width: 100%;
-        border-radius: 0 10px 10px 0;
+        width: auto;
+        border-radius: 10px 0px 0px 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        // position: absolute;
+        // right: 0;
+        // top: 0;
+        // z-index: -1;
     }
 
     .project-links {
@@ -188,16 +208,22 @@ h5 {
     }
 }
 
-div {
-    outline: 1px solid red;
-}
-
 #contact-container {
-    height: 40vh;
+    // height: 40vh;
     width: 90%;
-    margin: 0 auto;
-}
+    margin: 2em auto;
+    padding: 2em;
+    line-height: 2.5;
+    a {
+        text-decoration: none;
+        color: $highlight-text;
+    }
 
+    a:hover {
+        text-shadow: 2px 2px 5px $neu-upper, 2px 2px 5px $neu-lower;
+        color: hsla(166.2, 96.5%, 65.1%, 1);
+    }
+}
 
 // UTILITY CLASSES
 
@@ -214,10 +240,18 @@ div {
     border-radius: 10px;
 }
 
+.neumorphic-shadows-inset {
+    -webkit-box-shadow: inset 3px 3px 10px $neu-lower, inset -3px -3px 10px $neu-upper;
+    box-shadow: inset 3px 3px 10px $neu-lower, inset -3px -3px 10px $neu-upper;
+    border: 1px solid $neu-border;
+    border-radius: 10px;
+}
+
 .neumorphic-shadows-hover:hover {
-    cursor: pointer;
-    -webkit-box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
-    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+    // cursor: pointer;
+    // -webkit-box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+    // box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+    box-shadow: 5px 5px 12px $neu-lower, -5px -5px 12px $neu-upper;
 }
 
 @media screen and (max-width: 700px) {
