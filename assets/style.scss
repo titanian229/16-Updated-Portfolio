@@ -153,6 +153,7 @@ h5 {
     }
 
     p {
+        transform: rotate(180deg);
         position: fixed;
         left: 0;
         top: 50vh;
@@ -161,7 +162,6 @@ h5 {
         font-family: "Josefin Slab";
         writing-mode: vertical-rl;
         transform-origin: center;
-        transform: rotate(180deg);
         text-align: left;
     }
 }
