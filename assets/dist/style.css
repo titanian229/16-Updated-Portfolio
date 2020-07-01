@@ -85,6 +85,8 @@ h5 {
   color: #0d0d0d;
   background-color: #9fb3bf;
   line-height: 2;
+  border-bottom: 6px solid #a66000;
+  text-shadow: 1px 1px 4px white;
   transition: all 0.5s ease-in-out;
   position: relative;
   margin-bottom: 1em;
@@ -184,6 +186,7 @@ h5 {
   color: black;
   position: relative;
   height: 6em;
+  text-shadow: 1px 1px 4px #9fb3bf;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -256,6 +259,21 @@ h5 {
 
 #contact-container a:hover {
   color: #9fb3bf;
+}
+
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s;
+}
+
+@keyframes come-in {
+  to {
+    transform: translateY(0);
+  }
 }
 
 .clearfix::after {

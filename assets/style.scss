@@ -218,8 +218,8 @@ $anim: all 0.5s ease-in-out;
     // text-decoration: underline;
     background-color: $title-bg;
     line-height: 2;
-    // border-bottom: 6px solid $title-bottom;
-
+    border-bottom: 6px solid $title-bottom;
+    text-shadow: 1px 1px 4px white;
     transition: $anim;
     position: relative;
     margin-bottom: 1em;
@@ -331,6 +331,7 @@ $anim: all 0.5s ease-in-out;
         color: black;
         position: relative;
         height: 6em;
+        text-shadow: 1px 1px 4px $five;
 
         display: flex;
         justify-content: space-between;
@@ -500,6 +501,20 @@ $anim: all 0.5s ease-in-out;
 
 // UTILITY CLASSES
 
+.come-in {
+    transform: translateY(150px);
+    animation: come-in 0.8s ease forwards;
+}
+.come-in:nth-child(odd) {
+    animation-duration: 0.6s;
+}
+
+@keyframes come-in {
+    to {
+        transform: translateY(0);
+    }
+}
+
 .clearfix::after {
     content: "";
     clear: both;
@@ -511,7 +526,7 @@ $anim: all 0.5s ease-in-out;
         font-size: 0.8em;
     }
 
-     #about-container {
+    #about-container {
         flex-direction: column;
         div:first-of-type {
             width: 100%;

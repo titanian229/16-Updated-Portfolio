@@ -8,7 +8,7 @@ const projects = [
         description:
             "A web application for planning and mapping routes, that displays carbon contributions from each. ",
         githubLink: "https://github.com/titanian229/EcoRoute",
-        liveLink: "https://titanian229.github.io/EcoRoute",
+        liveLink: "https://go-ecoroute.com",
         imageURL: "./assets/icons/EcoRouteTall.jpg",
         technologies: ["JavaScript", "HTML/CSS", "HERE Mapping/Routing API", "OpenWeatherMap API", "Bootstrap"],
     },
