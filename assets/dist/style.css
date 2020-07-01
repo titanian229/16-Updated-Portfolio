@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +10,9 @@
 
 body {
   font-family: "Open Sans";
-  background-color: #08274e;
-  color: #93b3e9;
+  background-color: #0d0d0d;
+  color: #9fb3bf;
+  font-size: 80%;
 }
 
 h1,
@@ -19,36 +23,58 @@ h5 {
   font-family: "Comfortaa";
 }
 
+.logo {
+  font-size: 2em;
+  letter-spacing: -0.25em;
+  font-family: "Orbitron";
+}
+
+.logo span {
+  font-size: 1.35em;
+}
+
 #welcome-container {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url(../landscape-photo-of-mountain-fullq.jpg) center/cover no-repeat;
-  border-bottom: 6px solid #04508d;
+  background: url(../astro.jpg) center/cover no-repeat fixed;
+  border-bottom: 6px solid #023859;
+  position: relative;
+  z-index: -1;
 }
 
-#welcome {
-  padding: 40px;
-  border-radius: 25px;
-  line-height: 1.5;
-  background-color: rgba(77, 97, 153, 0.6);
-  backdrop-filter: blur(6px);
+#welcome-container h1 {
+  position: fixed;
+  font-size: 4em;
+  right: 0;
+  top: 4vw;
+  font-family: "Orbitron";
+  color: #638ca6;
+  letter-spacing: 0.3em;
+  writing-mode: vertical-rl;
+  line-height: 1.125;
 }
 
-#welcome h1 {
-  font-size: 2.5em;
-  margin-bottom: 1em;
-  color: #04e2af;
+#welcome-container p {
+  position: fixed;
+  left: 0;
+  bottom: 30vh;
+  font-size: 2.6em;
+  color: #4b7ba6;
+  font-family: "Josefin Slab";
+  writing-mode: vertical-rl;
+  text-align: right;
 }
 
-#welcome #subtitle {
-  font-size: 1.5em;
-  font-style: italic;
+#content {
+  background-color: #0d0d0d;
 }
 
-#welcome #headline {
-  font-size: 2em;
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .main-container {
@@ -57,15 +83,43 @@ h5 {
 
 .section-title {
   text-align: center;
-  color: #69d6ec;
-  text-decoration: underline;
+  color: black;
+  background-color: white;
+  line-height: 2;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+* + .section-title {
   margin-top: 3em;
 }
 
+.section-title:before, .section-title:after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  width: 0px;
+  height: 5px;
+  margin: 5px 0 0;
+  transition: all 0.5s ease-in-out;
+  transition-duration: 1s;
+  opacity: 0;
+  left: 0;
+  background-color: #e69500;
+}
+
+.section-title:hover {
+  cursor: pointer;
+}
+
+.section-title:hover:before, .section-title:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
 #skills {
-  font-size: 1em;
   text-align: center;
-  margin-top: 2em;
 }
 
 #about-container {
@@ -94,8 +148,8 @@ h5 {
 #about-container img {
   height: auto;
   width: 100%;
-  border-radius: 15px;
-  border: 2px solid #93b3e9;
+  border-bottom: 6px solid black;
+  border-radius: 5px;
 }
 
 .project-card {
@@ -110,7 +164,7 @@ h5 {
 .project-card .project-text {
   grid-column-start: 2;
   height: 100%;
-  background-color: #08274e;
+  background-color: #0d0d0d;
   padding: 1em;
   border-left: 6px solid #04508d;
 }
@@ -120,14 +174,13 @@ h5 {
   margin-bottom: 0.8em;
   padding-left: 1em;
   height: 2.5em;
-  color: #04e2af;
+  color: #0d0d0d;
   display: flex;
   align-items: center;
 }
 
 .project-card .project-text .project-description {
   width: 100%;
-  box-shadow: inset 1px 1px 5px #010409, inset -1px -1px 5px #0f4a94;
   padding: 1em;
   border-radius: 10px;
 }
@@ -171,7 +224,7 @@ h5 {
 }
 
 .project-card .project-links a {
-  color: #93b3e9;
+  color: #9fb3bf;
 }
 
 #contact-container {
@@ -183,12 +236,11 @@ h5 {
 
 #contact-container a {
   text-decoration: none;
-  color: #04e2af;
+  color: #638ca6;
 }
 
 #contact-container a:hover {
-  text-shadow: 2px 2px 5px #0f4a94, 2px 2px 5px #010409;
-  color: #50fcd4;
+  color: #9fb3bf;
 }
 
 .clearfix::after {
@@ -197,52 +249,18 @@ h5 {
   display: table;
 }
 
-.neumorphic-shadows {
-  -webkit-box-shadow: 3px 3px 10px #010409, -3px -3px 10px #0f4a94;
-  box-shadow: 3px 3px 10px #010409, -3px -3px 10px #0f4a94;
-  border: 1px solid #08274e;
-  border-radius: 10px;
-}
-
-.neumorphic-shadows-inset {
-  -webkit-box-shadow: inset 3px 3px 10px #010409, inset -3px -3px 10px #0f4a94;
-  box-shadow: inset 3px 3px 10px #010409, inset -3px -3px 10px #0f4a94;
-  border: 1px solid #08274e;
-  border-radius: 10px;
-}
-
-.neumorphic-shadows-hover:hover {
-  box-shadow: 5px 5px 12px #010409, -5px -5px 12px #0f4a94;
-}
-
 @media screen and (max-width: 700px) {
   #skills {
     font-size: 0.8em;
   }
-  .project-description {
-    width: 100%;
-    backdrop-filter: blur(6px);
-  }
-  .project-card {
-    width: 100%;
-    position: relative;
-    grid-template-columns: 1fr;
-  }
-  .project-card img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0.2;
-  }
-  #about-container {
+  #welcome #about-container {
     flex-direction: column;
   }
-  #about-container div:first-of-type {
+  #welcome #about-container div:first-of-type {
     width: 100%;
     margin-right: 2.5em;
   }
-  #about-container div:nth-child(2) {
+  #welcome #about-container div:nth-child(2) {
     margin-top: 1em;
     width: 100%;
   }
