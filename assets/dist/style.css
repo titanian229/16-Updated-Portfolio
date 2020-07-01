@@ -165,6 +165,8 @@ h5 {
   color: #9fb3bf;
   transition: 0.3s;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card .project-text {
@@ -206,7 +208,7 @@ h5 {
 
 .project-card .project-headline {
   font-style: italic;
-  color: #765e4f;
+  color: #a66000;
   width: 70%;
 }
 
@@ -228,9 +230,9 @@ h5 {
 }
 
 .project-card .project-links {
-  position: relative;
   bottom: 0;
   font-size: 3em;
+  margin-top: auto;
   padding: 0.5em 1em;
   display: flex;
   justify-content: space-between;
@@ -266,14 +268,14 @@ h5 {
   #skills {
     font-size: 0.8em;
   }
-  #welcome #about-container {
+  #about-container {
     flex-direction: column;
   }
-  #welcome #about-container div:first-of-type {
+  #about-container div:first-of-type {
     width: 100%;
     margin-right: 2.5em;
   }
-  #welcome #about-container div:nth-child(2) {
+  #about-container div:nth-child(2) {
     margin-top: 1em;
     width: 100%;
   }
