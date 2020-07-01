@@ -62,16 +62,16 @@ const projects = [
         imageURL: "./assets/icons/password-generator.jpg",
         technologies: ["HTML/CSS", "JavaScript"],
     },
-    {
-        projectName: "pHue Experiment",
-        subtitle: "Simply control your smart lightbulb",
-        description:
-            "A proof of concept Python controller providing a simple command line interface using POST requests to control a smart light's settings.",
-        githubLink: "https://github.com/titanian229/phueUIExperiment",
-        liveLink: "",
-        imageURL: "./assets/icons/phue.jpg",
-        technologies: ["Python", "pHue Library"],
-    },
+    // {
+    //     projectName: "pHue Experiment",
+    //     subtitle: "Simply control your smart lightbulb",
+    //     description:
+    //         "A proof of concept Python controller providing a simple command line interface using POST requests to control a smart light's settings.",
+    //     githubLink: "https://github.com/titanian229/phueUIExperiment",
+    //     liveLink: "",
+    //     imageURL: "./assets/icons/phue.jpg",
+    //     technologies: ["Python", "pHue Library"],
+    // },
     {
         projectName: "TC-Tools",
         subtitle:
@@ -124,7 +124,8 @@ const renderProject = (project) => {
     let template = fs.readFileSync(path.resolve(__dirname, "project-template.html"), "utf8");
     template = replacePlaceholders(template, "ProjectTitle", project.projectName);
     template = replacePlaceholders(template, "ProjectHeadline", project.subtitle);
-
+    template = replacePlaceholders(template, "ProjectDescription", project.description);
+    
     technologies = project.technologies.map(function (techItem) {
         return `<li>${techItem}</li>`;
     });

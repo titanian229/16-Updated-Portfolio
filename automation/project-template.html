@@ -1,17 +1,18 @@
-<div class="project-card neumorphic-shadows">
-    <img src="{{ ProjectImg }}" alt="" />
+<div class="project-card">
+    <div class="project-title">
+        <h2>{{ ProjectTitle }}</h2>
+        <img src="{{ ProjectImg }}" alt="" />
+    </div>
     <div class="project-text">
-        <div class="project-title">
-            <h2>{{ ProjectTitle }}</h2>
-        </div>
         <div class="project-description">
             <p class="project-headline">{{ ProjectHeadline }}</p>
+            <p class="description">{{ ProjectDescription }}</p>
             <ul>
                 {{ ProjectTechnologies }}
             </ul>
-            <div class="project-links">
-                {{ ProjectLiveLink }} {{ ProjectGithub }}
-            </div>
         </div>
+    </div>
+    <div class="project-links">
+        {{ ProjectLiveLink }} {{ ProjectGithub }}
     </div>
 </div>
