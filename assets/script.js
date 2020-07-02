@@ -1,11 +1,15 @@
 gsap.from("#welcome-container h1", { delay: 2, duration: 1, x: 110, opacity: 0, ease: "circ" });
 // gsap.from("#welcome-container p", { delay: 3, duration: 1, x: -110, opacity: 0, ease: "circ" });
-gsap.to("#astronaut", {delay:5, duration: 7, width: 50, ease: "back.inOut", left: 30, top:30})
+gsap.to("#astronaut", { delay: 5, duration: 7, width: 50, ease: "back.inOut", left: 30, top: 30 });
+// gsap.from("#earth", {delay:4, duration: 3, bottom: "-30vh"})
+
+// gsap.to("#about-container img", {delay:3, duration:3, y: 10, opacity: 0});
 
 //detecting scroll
+
 (function () {
-    var elements;
-    var windowHeight;
+    let elements;
+    let windowHeight;
 
     function init() {
         elements = document.querySelectorAll(".project-card");
@@ -13,9 +17,9 @@ gsap.to("#astronaut", {delay:5, duration: 7, width: 50, ease: "back.inOut", left
     }
 
     function checkPosition() {
-        for (var i = 0; i < elements.length; i++) {
-            var element = elements[i];
-            var positionFromTop = elements[i].getBoundingClientRect().top;
+        for (let i = 0; i < elements.length; i++) {
+            let element = elements[i];
+            let positionFromTop = elements[i].getBoundingClientRect().top;
 
             if (positionFromTop - windowHeight <= 0) {
                 element.classList.add("come-in");
