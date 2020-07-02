@@ -1,5 +1,6 @@
 gsap.from("#welcome-container h1", { delay: 2, duration: 1, x: 110, opacity: 0, ease: "circ" });
-gsap.from("#welcome-container p", { delay: 3, duration: 1, x: -110, opacity: 0, ease: "circ" });
+// gsap.from("#welcome-container p", { delay: 3, duration: 1, x: -110, opacity: 0, ease: "circ" });
+gsap.to("#astronaut", {delay:5, duration: 7, width: 50, ease: "back.inOut", left: 30, top:30})
 
 //detecting scroll
 (function () {
