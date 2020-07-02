@@ -67,13 +67,19 @@ h5 {
   position: fixed;
   font-size: 4em;
   right: 0;
+  margin-right: 10px;
   top: 2vw;
   font-family: "Orbitron";
-  color: #638ca6;
+  color: #4b7ba6;
   letter-spacing: 0.3em;
   writing-mode: vertical-rl;
-  line-height: 1.125;
+  line-height: 0.95;
   animation: inleft 0 1s ease-in;
+  z-index: -1;
+}
+
+#welcome-container h1 span {
+  color: #638ca6;
 }
 
 #welcome-container p {
