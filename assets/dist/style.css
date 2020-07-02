@@ -102,13 +102,16 @@ h5 {
 }
 
 nav {
-  position: absolute;
+  position: sticky;
+  top: 0px;
   left: 1em;
+  width: max-content;
   font-family: "IBM Plex Mono";
   bottom: 1em;
   background-color: #0d0d0d;
   color: #78cafc;
   border-radius: 5px;
+  z-index: 100;
 }
 
 nav ul {
@@ -124,12 +127,12 @@ nav li:first-child {
   transition: all 1s;
 }
 
-nav li:nth-child(n+2) {
+nav li:nth-child(n + 2) {
   padding: 1em;
   width: 100%;
 }
 
-nav li:nth-child(n+2):hover {
+nav li:nth-child(n + 2):hover {
   background-color: white;
 }
 

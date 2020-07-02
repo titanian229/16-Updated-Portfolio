@@ -1,10 +1,11 @@
 let tl = gsap.timeline();
 
-tl.from("#welcome-container h1", { delay: 2, duration: 1, x: 110, opacity: 0, ease: "circ" });
 // gsap.from("#welcome-container p", { delay: 3, duration: 1, x: -110, opacity: 0, ease: "circ" });
 // tl.to("#astronaut", { delay: 0.5, duration: 3, width: 50, ease: "back.inOut", left: 30, top: 30 });
-tl.to("#earth", {delay:1, duration: 3, bottom: "-30vh"})
-tl.from("nav", { duration: 1.5, opacity: 0, ease: "circ"});
+tl.to("#earth", {delay: 3, duration: 4, y: "80vh", opacity: 0, ease: "sine.in" }, "earthFade");
+tl.from("#astronaut", { delay: 3, duration: 4, css: { scale: 0.4 }, ease: "power1.inOut" }, "earthFade");
+tl.from("#welcome-container h1", {duration: 0.7, x: 110, opacity: 0, ease: "circ" }, "name");
+tl.from("nav", { delay: 0, duration: 0.7 , x:-110, opacity: 0, ease: "circ" }, "name");
 
 // gsap.to("#about-container img", {delay:3, duration:3, y: 10, opacity: 0});
 
