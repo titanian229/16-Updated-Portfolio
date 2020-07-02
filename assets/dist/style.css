@@ -31,7 +31,7 @@ h5 {
 
 .logo span {
   font-size: 1.35em;
-  color: #023859;
+  color: #638ca6;
 }
 
 .highlight {
@@ -104,8 +104,10 @@ h5 {
 nav {
   position: absolute;
   left: 1em;
-  top: 100px;
+  font-family: "IBM Plex Mono";
+  bottom: 1em;
   background-color: #0d0d0d;
+  color: #78cafc;
   border-radius: 5px;
 }
 
@@ -114,8 +116,6 @@ nav ul {
   display: flex;
   flex-direction: column;
   font-size: 1.5em;
-  align-items: center;
-  justify-content: center;
 }
 
 nav li:first-child {
