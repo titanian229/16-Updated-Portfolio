@@ -358,6 +358,27 @@ $anim: all 0.5s ease-in-out;
     text-align: center;
     color: lighten($two, 40);
     // margin-top: 2em;
+
+    p::before {
+        content: '<\A0';
+        color: lighten($complementary-0, 20);
+    }
+
+    p::after {
+        color: lighten($complementary-0, 20);
+        content: '\A0>';
+    }
+}
+
+.circle {
+    border-radius: 50%;
+    height: 0.6ch;
+    width: 0.6ch;
+    background-color: lighten($complementary-0, 20);
+    // border: 1px solid red;
+    display: inline-block;
+    margin: 0 0.5ch;
+    margin-bottom: 0.3ch;
 }
 
 #about-container {
@@ -609,10 +630,21 @@ $anim: all 0.5s ease-in-out;
 
 #contact-container {
     // height: 40vh;
-    width: 90%;
-    margin: 2em auto;
-    padding: 2em;
-    line-height: 2.5;
+    display: flex;
+    align-items: center;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    > div:first-of-type {
+        width: 40%;
+    }
+    > div:nth-child(2) {
+        width: 40%;
+        margin: 2em auto;
+        padding: 2em;
+        line-height: 2.5;
+    }
     a {
         text-decoration: none;
         color: $link;
@@ -622,6 +654,16 @@ $anim: all 0.5s ease-in-out;
         color: $hover;
     }
 }
+
+footer {
+    margin-top: 3em;
+    width: 100%;
+    background-color: $two;
+    color: $four;
+    padding: 0.6em 2em;
+}
+
+
 
 // UTILITY CLASSES
 
@@ -660,6 +702,17 @@ $anim: all 0.5s ease-in-out;
         div:nth-child(2) {
             margin-top: 1em;
             width: 100%;
+        }
+    }
+    #contact-container {
+        flex-direction: column-reverse;
+        div:first-of-type {
+            width: 90%;
+        }
+        div:nth-child(2) {
+            margin: 1em;
+            width: 90%;
+
         }
     }
 }

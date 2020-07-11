@@ -192,6 +192,26 @@ nav li:nth-child(n + 2):hover {
   color: #2dacfa;
 }
 
+#skills p::before {
+  content: '<\A0';
+  color: #ff990d;
+}
+
+#skills p::after {
+  color: #ff990d;
+  content: '\A0>';
+}
+
+.circle {
+  border-radius: 50%;
+  height: 0.6ch;
+  width: 0.6ch;
+  background-color: #ff990d;
+  display: inline-block;
+  margin: 0 0.5ch;
+  margin-bottom: 0.3ch;
+}
+
 #about-container {
   margin-top: 4em;
   line-height: 1.5;
@@ -338,7 +358,21 @@ nav li:nth-child(n + 2):hover {
 }
 
 #contact-container {
-  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+#contact-container img {
+  width: 100%;
+  height: auto;
+}
+
+#contact-container > div:first-of-type {
+  width: 40%;
+}
+
+#contact-container > div:nth-child(2) {
+  width: 40%;
   margin: 2em auto;
   padding: 2em;
   line-height: 2.5;
@@ -351,6 +385,14 @@ nav li:nth-child(n + 2):hover {
 
 #contact-container a:hover {
   color: #9fb3bf;
+}
+
+footer {
+  margin-top: 3em;
+  width: 100%;
+  background-color: #023859;
+  color: #638ca6;
+  padding: 0.6em 2em;
 }
 
 .come-in {
@@ -388,6 +430,16 @@ nav li:nth-child(n + 2):hover {
   #about-container div:nth-child(2) {
     margin-top: 1em;
     width: 100%;
+  }
+  #contact-container {
+    flex-direction: column-reverse;
+  }
+  #contact-container div:first-of-type {
+    width: 90%;
+  }
+  #contact-container div:nth-child(2) {
+    margin: 1em;
+    width: 90%;
   }
 }
 
