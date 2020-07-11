@@ -43,7 +43,7 @@ setTimeout(function () {
     let windowHeight;
 
     function init() {
-        sectionTitle = document.querySelector('.section-title');
+        sectionTitle = document.querySelector('#skills');
         windowHeight = window.innerHeight;
     }
 
