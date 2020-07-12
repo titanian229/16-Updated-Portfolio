@@ -189,13 +189,13 @@ document.querySelector('#projects-container').innerHTML = projects.map((project)
 
 //links
 
-document.querySelector('#about').addEventListener('click', () => (window.location.href = window.location.href.split("#")[0] + '#about-title'));
+document.querySelector('#about').addEventListener('click', () => {window.location.href = window.location.href.split("#")[0] + '#about-title'});
 document
     .querySelector('#portfolio')
-    .addEventListener('click', () => (window.location.href = window.location.href.split("#")[0] + '#portfolio-title'));
+    .addEventListener('click', () => {window.location.href = window.location.href.split("#")[0] + '#portfolio-title'});
 document
     .querySelector('#contact')
-    .addEventListener('click', () => (window.location.href = window.location.href.split("#")[0] + '#contact-title'));
+    .addEventListener('click', () => {window.location.href = window.location.href.split("#")[0] + '#contact-title'});
 document
     .querySelector('.logo')
     .addEventListener('click', () => document.querySelector('nav').classList.toggle('minimized'));
